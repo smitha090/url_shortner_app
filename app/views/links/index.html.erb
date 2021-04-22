@@ -1,0 +1,14 @@
+<div style='text-align: center;'>
+  <h1>Welcome to short.com</h1>
+  </br>
+  <h3>Please Enter Your URL Here</h3>
+  <%=  form_for @link do |f| %>
+ 
+    <%= f.text_field :original_url, style: 'width: 400px; height: 20px; dispaly: block; border: 1px solid;'%>
+    <%= f.submit "Shortner", id: "submit_button", remote: true, class: "btn btn-primary", style: 'width: 80px; height: 25px; border: 1px solid; font-size: 14px;' %>
+  <% end %>
+</div>    
+
+  
+
+  

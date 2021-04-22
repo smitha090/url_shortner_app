@@ -1,0 +1,6 @@
+<h1>Welcome to short.com</h1>
+<p>Please Enter Your URL Here</p>
+<%=  form_for @link do |f| %>
+    <%= f.text_field :original_url %>
+    <%= f.submit "Shortner" %>
+    <% end %>
