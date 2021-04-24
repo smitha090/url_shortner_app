@@ -1,5 +1,10 @@
+
+
 class LinksController < ApplicationController
+
     def index
+      @link=Link.new
+      p request.remote_ip
     end  
     
     def create

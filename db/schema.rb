@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_20_073611) do
+ActiveRecord::Schema.define(version: 2021_04_23_125101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,19 @@ ActiveRecord::Schema.define(version: 2021_04_20_073611) do
     t.string "original_url"
     t.string "short_url"
     t.integer "clicked", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "country"
+    t.string "region"
+    t.string "city"
+    t.integer "postal_code"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "metro_code"
+    t.integer "area_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

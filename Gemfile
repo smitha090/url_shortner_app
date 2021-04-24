@@ -3,8 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
-gem 'geocoder'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
@@ -29,12 +27,23 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+gem 'geocoder'
+gem 'iplocate'
+gem 'geoip'
+gem 'ipinfo-rails'
+
+gem 'geoip-rails'
+platforms :jruby do
+  gem 'jruby-openssl'
+  gem 'jgeoip'
+end
+
+gem 'httparty'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
